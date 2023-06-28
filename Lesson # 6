@@ -1,18 +1,15 @@
-class Account:
-    def __init__(self, owner, balance=0):
-        self.owner = owner
-        self.balance = balance
- 
-    def __str__(self): 
-        return f'Владелец счёта: {self.owner}\nБаланс счёта: {self.balance}$'
- 
-    def deposit(self, add):
-        self.balance += add
-        print('Внесение выполнено')
-    
-    def withdraw(self, take): 
-        if take > self.balance:
-            print('Недостаточно средств!')
+lower_alphabet = 'abcdefghijklmnopqrstuvwxyz'
+upper_alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+print("Введите сдвиг (если нужно дешифровать, сдвиг введите с минусом)")
+key = int(input())
+print("Введите текст")
+text = input()
+def my_function(k, t):
+    for i in range(len(t)):
+        if t[i] in upper_alphabet:
+            print(upper_alphabet[(upper_alphabet.index(t[i]) + k) % len(upper_alphabet)], end='')
+        elif t[i] in lower_alphabet:
+            print(lower_alphabet[(lower_alphabet.index(t[i]) + k) % len(lower_alphabet)], end='')
         else:
-            self.balance -= take
-            print('Снятие выполнено')
+            print(t[i], end='')
+my_function(key, text)
