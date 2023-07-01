@@ -1,3 +1,4 @@
+*****
 class Line:
     "Класс для нахождения длины и угла линии"
     
@@ -17,6 +18,7 @@ class Line:
         return (y2 - y1) / (x2 - x1)
 
 
+*****
 class Cylinder:
     "Класс для нахождения объёма и поверхности цилиндра"
 
@@ -31,6 +33,7 @@ class Cylinder:
         return 2 * 3.14 * self.radius * (self.radius + self.height)
 
 
+*****
 class Account:
     def __init__(self, owner, balance=0):
         self.owner = owner
