@@ -1,2 +1,25 @@
-pass
-pass
+*****
+def gensquares(n):
+    for x in range(n):
+        yield x**2
+ 
+for x in gensquares(10):
+    print(x)
+
+
+*****
+from random import randint
+ 
+def rand_num(low, high, n):
+    for x in range(n):
+        yield randint(low, high)
+        
+for x in rand_num(1, 10, 12):
+    print(x)
+
+
+*****
+i = 'python'
+i_iter = iter(i)  
+for _ in range(len(i)): 
+    print(next(i_iter))
