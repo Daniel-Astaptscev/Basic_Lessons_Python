@@ -1,0 +1,32 @@
+***
+for i in ['a', 'b', 'c']:
+    try:
+        print(i**2)
+    except: 
+        print('Не число - нельзя возвести в квадрат')
+
+***
+x, y = 5, 0
+try:
+    print(z := x/y)
+except: 
+    print('На ноль делить нельзя!')
+finally:
+    print('Текущая операция выполнена')
+
+***
+def ask(): 
+    
+    count = 1
+    while True:
+        try:
+            i = int(input('Пожалуйста, введите любое число: '))
+            break
+        except: 
+            print('Вы пытаетесь ввести не число')
+            continue
+        finally:
+            print(f'Кол-во ваших попыток: {count}')
+            count += 1
+            
+ask()
